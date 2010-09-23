@@ -1,0 +1,10 @@
+David Precious's custom SpamAssassin rules
+
+
+This is a set of basic additional SpamAssassin rules I find useful to trap a few
+spam messages which occasionally slip past SpamAssassin.
+
+I periodically update them.
+
+Feel free to make use of them if you like :)
+

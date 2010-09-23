@@ -1,0 +1,272 @@
+# A handful of custom SpamAssassin rules, tweaked to catch anything that gets
+# through my SpamAssassin setup.
+# Feel free to use if they're helpful to you.
+#
+# David Precious <davidp@preshweb.co.uk>
+
+
+body        DP_ACAI   /acai/i
+describe    DP_ACAI   Message body mentions Acai berry
+score       DP_ACAI   3.5
+
+body        DP_SHIP_WORLDWIDE  /We ship worldwide/i
+describe    DP_SHIP_WORLDWIDE  Body mentions shipping worldwide
+score       DP_SHIP_WORLDWIDE  2.5
+
+body        DP_SEX_LIFE        /sex(ual)? life/i
+describe    DP_SEX_LIFE        Body mentions sex life
+score       DP_SEX_LIFE        3.0
+
+body        DP_ENHANCE_YOUR    /enhance your/i
+describe    DP_ENHANCE_YOUR    Body mentions enhancing your...
+score       DP_ENHANCE_YOUR    3.0
+
+body        DP_ONLINE_PHARMA   /on\W?line pharmacy/i
+describe    DP_ONLINE_PHARMA   Body mentions online pharmacy
+score       DP_ONLINE_PHARMA   3.0
+
+header      DP_URGENT_SUBJ     Subject =~ /urgent/i
+describe    DP_URGENT_SUBJ     Subject mentions urgent
+score       DP_URGENT_SUBJ     2.5
+
+header      DP_ASSISTANCE      Subject =~ /assistance needed/i
+describe    DP_ASSISTANCE      Subject mentions assistance needed
+score       DP_ASSISTANCE      2.3
+
+body        DP_PAYMENT_OF      /payment of/i
+describe    DP_PAYMENT_OF      Mentions a payment of
+score       DP_PAYMENT_OF      1.8
+
+body        DP_WISH_INTRO      /wish to introduce myself/i
+describe    DP_WISH_INTRO      Body mentions wish to introduce myself
+score       DP_WISH_INTRO      2.1
+
+body        DP_IMF             /interational monetary fund/i
+describe    DP_IMF             Mentions international monetary fund
+score       DP_IMF             3.2
+
+body        DP_FSA             /financial services authority/i
+describe    DP_FSA             Mentions Financial Services Authority
+score       DP_FSA             2.1
+
+body        DP_BENEFICIARY     /beneficiary/i
+describe    DP_BENEFICIARY     Mentions beneficiary
+score       DP_BENEFICIARY     2.5
+
+body        DP_SEND_INFO       /send the following info/i
+describe    DP_SEND_INFO       Wants you to send info
+score       DP_SEND_INFO       2.6
+
+body        DP_ATM_CARD        /atm card/i
+describe    DP_ATM_CARD        Mentions an ATM card
+score       DP_ATM_CARD        3.0
+
+body        DP_PAY_OFFICER     /payment officer/i
+describe    DP_PAY_OFFICER     Mentions payment officer
+score       DP_PAY_OFFICER     3.0
+
+body        DP_BOARD_OF        /board of/i
+describe    DP_BOARD_OF        Mentions board of...
+score       DP_BOARD_OF        2.6
+
+body        DP_US_DOLLARS      /us dollars/i
+describe    DP_US_DOLLARS      Mentions US dollars
+score       DP_US_DOLLARS      2.5
+
+body        DP_AWARDED         /you have been awarded/i
+describe    DP_AWARDED         Mentions being awarded something
+score       DP_AWARDED         2.5
+
+body        DP_ATTACHED_TICKET /attached to ticket number/i
+describe    DP_ATTACHED_TICKET Mentions attached to ticket (lottery spams)
+score       DP_ATTACHED_TICKET 2.6
+
+body        DP_COMP_SEL        /computeri[sz]ed (email )?selection/i
+describe    DP_COMP_SEL        Mentions computerised selection
+score       DP_COMP_SEL        2.4
+
+body        DP_FROM_WWW        /from the world wide web/i
+describe    DP_FROM_WWW        Mentions from the world wide web
+score       DP_FROM_WWW        2.4
+
+body        DP_WINNING_AMOUNT  /winning amount/i
+describe    DP_WINNING_AMOUNT  Mentions winning an amount
+score       DP_WINNING_AMOUNT  2.8
+
+body        DP_RANDOM_SEL      /randomly selected/i
+describe    DP_RANDOM_SEL      Mentions randomly selected
+score       DP_RANDOM_SEL      2.6
+
+body        DP_THOU_DOLLAR     /[$£](\d{3},){2,}/
+describe    DP_THOU_DOLLAR     Mentions large sum of dollars/pounds
+score       DP_THOU_DOLLAR     2.8
+
+body        DP_BIG_NUM         /[1-9]00,000/
+describe    DP_BIG_NUM         Mentions x00,000... (common in lottery spam)
+score       DP_BIG_NUM         2.4
+
+body        DP_LUMP_SUM        /lump sum/i
+describe    DP_LUMP_SUM        Mentions a lump sum
+score       DP_LUMP_SUM        2.0
+
+body        DP_YOU_ARE_REQ     /you are requested/i
+describe    DP_YOU_ARE_REQ     You are requested...
+score       DP_YOU_ARE_REQ     2.8
+
+body        DP_CONTACT_AGENT   /contact (our )?agent/i
+describe    DP_CONTACT_AGENT   Contact our agent..
+score       DP_CONTACT_AGENT   2.6
+
+body        DP_SEND_YOUR_WIN   /send your winning/i
+describe    DP_SEND_YOUR_WIN   Send your winning ...
+score       DP_SEND_YOUR_WIN   2.7
+
+body        DP_SETTLEMENT_CNTR /settlement cent(er|re)/i
+describe    DP_SETTLEMENT_CNTR Settlement centre
+score       DP_SETTLEMENT_CNTR 2.8
+
+body        DP_PRIZE_ADMIN     /prize administrator/i
+describe    DP_PRIZE_ADMIN     Prize administrator
+score       DP_PRIZE_ADMIN     3.0
+
+header      DP_SUBJ_CONGRATS   Subject =~ /congratulations/i
+describe    DP_SUBJ_CONGRATS   Congratulations in subject
+score       DP_SUBJ_CONGRATS   2.5
+
+body        DP_HAS_WON_YOU     /has won you/i
+describe    DP_HAS_WON_YOU     Has won you...
+score       DP_HAS_WON_YOU     2.8
+
+body        DP_PAYMENT_APPR    /payment.+has been approved/i
+describe    DP_PAYMENT_APPR    Payment has been approved
+score       DP_PAYMENT_APPR    3.0
+
+body        DP_SUM_OF          /the sum of/i
+describe    DP_SUM_OF          The sum of...
+score       DP_SUM_OF          2.0
+
+body        DP_CONFIRM_IMM     /confirm immediately the following/i
+describe    DP_CONFIRM_IMM     Confirm immediately the following...
+score       DP_CONFIRM_IMM     2.7
+
+body        DP_YOUR_FULL_NAME  /your full name/i
+describe    DP_YOUR_FULL_NAME  Your full name/i
+score       DP_YOUR_FULL_NAME  2.0
+
+body        DP_ATTN            /Attn:/i
+describe    DP_ATTN            Attn:
+score       DP_ATTN            1.6
+
+body        DP_DEBT_RELEASE    /debt release/i
+describe    DP_DEBT_RELEASE    Debt release...
+score       DP_DEBT_RELEASE    2.6
+
+header      DP_WORK_WITH_US    Subject =~ /work (with|for) us/i
+describe    DP_WORK_WITH_US    Work with us...
+score       DP_WORK_WITH_US    2.0
+
+body        DP_PROSP_EMP       /prospective employee/i
+describe    DP_PROSP_EMP       Prospective employee
+score       DP_PROSP_EMP       2.0
+
+body        DP_BE_REP          /be one of our representatives/i
+describe    DP_BE_REP          Be one of our representatives
+score       DP_BE_REP          2.3
+
+body        DP_EARN_A_COM      /earn a commission/i
+describe    DP_EARN_A_COM      Earn a commission...
+score       DP_EARN_A_COM      2.0
+
+body        DP_DEDUCT_PC       /deduct \d+(%|percent)/i
+describe    DP_DEDUCT_PC       Deduct a percentage
+score       DP_DEDUCT_PC       1.8
+
+body        DP_SEND_FOLLOWING  /(send|forward) the following/i
+describe    DP_SEND_FOLLOWING  Send the following...
+score       DP_SEND_FOLLOWING  1.9
+
+body        DP_SUSPEND_ACCOUNT /(suspend your account|account will be suspended)/i
+describe    DP_SUSPEND_ACCOUNT Account will be suspended...
+score       DP_SUSPEND_ACCOUNT 2.8
+
+subject     DP_SUBJ_ACCESSED   /account was accessed by/i
+describe    DP_SUBJ_ACCESSED   Account was accessed by...
+score       DP_SUBJ_ACCESSED   2.8
+
+body        DP_DOTS_DASHES     /[_.-]{6,}/
+describe    DP_DOTS_DASHES     Long line of dots/dashes/underscores
+score       DP_DOTS_DASHES     1.6
+
+body        DP_YOU_WILL_EARN   /you will earn/i
+describe    DP_YOU_WILL_EARN   You will earn...
+score       DP_YOU_WILL_EARN   2.6
+
+body        DP_MIL_OF_DOLLAR   /millions of dollars/i
+describe    DP_MIL_OF_DOLLAR   Millions of dollars
+score       DP_MIL_OF_DOLLAR   2.5
+
+body        DP_YOU_HAVE_WON    /you have won/i
+describe    DP_YOU_HAVE_WON    You have won...
+score       DP_YOU_HAVE_WON    2.0
+
+body        DP_WESTERN_UNION   /western union/i
+describe    DP_WESTERN_UNION   Western Union is often dodgy
+score       DP_WESTERN_UNION   2.0
+
+body        DP_MONEY_TRANS     /money transfer/i
+describe    DP_MONEY_TRANS     Money transfer...
+score       DP_MONEY_TRANS     1.8
+
+body        DP_UNITED_NATIONS  /united nation/i
+describe    DP_UNITED_NATIONS  United Nations...
+score       DP_UNITED_NATIONS  1.8
+
+body        DP_SEC_GEN         /Secretary[ -]General/i
+describe    DP_SEC_GEN         Secretary General...
+score       DP_SEC_GEN         2.0
+
+body        DP_COMMITTEE       /comm?itt?ee?/i
+describe    DP_COMMITTEE       Committee
+score       DP_COMMITTEE       1.5
+
+body        DP_UNUSUAL_ACT     /(unusual|irregular) activity/i
+describe    DP_UNUSUAL_ACT     Unusual activity
+score       DP_UNUSUAL_ACT     1.8
+
+body        DP_FOR_YOUR_PROT   /for your protection/i
+describe    DP_FOR_YOUR_PROT   For your protection...
+score       DP_FOR_YOUR_PROT   2.0
+
+body        DP_ACTIVITY_ON_ACC /activity on your account/i
+describe    DP_ACTIVITY_ON_ACC Activity on your account...
+score       DP_ACTIVITY_ON_ACC 2.0
+
+body        DP_YOU_MUST_VERIFY /you must verify/i
+describe    DP_YOU_MUST_VERIFY You must verify...
+score       DP_YOU_MUST_VERIFY 1.8
+
+body        DP_REMOVE_RESTRICT /will remove any restrictions/i
+describe    DP_REMOVE_RESTRICT Remove any restrictions...
+score       DP_REMOVE_RESTRICT 2.0
+
+body        DP_SIGN_INTO_IB    /sign into internet banking/i
+describe    DP_SIGN_INTO_IB    Sign into internet banking...
+score       DP_SIGN_INTO_IB    1.8
+
+body        DP_SWEEPSTAKE_AW   /sweepstakes? award/i
+describe    DP_SWEEPSTAKE_AW   Sweepstakes award
+score       DP_SWEEPSTAKE_AW   2.5
+
+
+
+
+# these depend on Mail::SpamAssassin::Plugin::RelayCountry :
+header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
+describe        RELAYCOUNTRY_CN Relayed through China
+score           RELAYCOUNTRY_CN 4.0
+
+header          RELAYCOUNTRY_RU X-Relay-Countries =~ /RU/
+describe        RELAYCOUNTRY_RU Relayed through Russian Federation
+score           RELAYCOUNTRY_RU 4.0
+
+
