@@ -97,7 +97,7 @@ body        DP_RANDOM_SEL      /randomly selected/i
 describe    DP_RANDOM_SEL      Mentions randomly selected
 score       DP_RANDOM_SEL      2.6
 
-body        DP_THOU_DOLLAR     /[$£](\d{3},){2,}/
+body        DP_THOU_DOLLAR     /[\$£](\d{3},){2,}/
 describe    DP_THOU_DOLLAR     Mentions large sum of dollars/pounds
 score       DP_THOU_DOLLAR     2.8
 
@@ -189,7 +189,7 @@ body        DP_SUSPEND_ACCOUNT /(suspend your account|account will be suspended)
 describe    DP_SUSPEND_ACCOUNT Account will be suspended...
 score       DP_SUSPEND_ACCOUNT 2.8
 
-subject     DP_SUBJ_ACCESSED   /account was accessed by/i
+full        DP_SUBJ_ACCESSED   /account was accessed by/i
 describe    DP_SUBJ_ACCESSED   Account was accessed by...
 score       DP_SUBJ_ACCESSED   2.8
 
