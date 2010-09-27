@@ -253,6 +253,40 @@ body        DP_SIGN_INTO_IB    /sign into internet banking/i
 describe    DP_SIGN_INTO_IB    Sign into internet banking...
 score       DP_SIGN_INTO_IB    1.8
 
+full        DP_ACC_WAS_ACCESSED /your account was accessed/i
+describe    DP_ACC_WAS_ACCESSED Your account was accessed...
+score       DP_ACC_WAS_ACCESSED 2.0
+
+body        DP_MIL_GRD_ENC /Military Grade Encryption is Only the Start/i
+describe    DP_MIL_GRD_ENC Military Grade Encryption is Only the Start...
+score       DP_MIL_GRD_ENC 2.0
+
+body        DP_NOTICED_LOGIN /We recently noticed .+attempts to log in/i
+describe    DP_NOTICED_LOGIN We recently noticed attempts to log in
+score       DP_NOTICED_LOGIN 2.0
+
+body        DP_ACC_WAS_COMP /your account was compromised/i
+describe    DP_ACC_WAS_COMP Your account was compromised, allegedly
+score       DP_ACC_WAS_COMP 2.0
+
+body        DP_IF_RIGHTFUL /if you are the rightfull? holder of/i
+describe    DP_IF_RIGHTFUL If you are the rightful holder...
+score       DP_IF_RIGHTFUL 2.0
+
+body        DP_DOWNLOAD_FORM /download the form attached/i
+describe    DP_DOWNLOAD_FORM Download the form attached
+score       DP_DOWNLOAD_FORM 1.5
+
+body        DP_WE_TRY_VERIFY /we try to verify your identity/i
+describe    DP_WE_TRY_VERIFY We try to verify your identity.  We really do.
+score       DP_WE_TRY_VERIFY 2.0
+
+body        DP_SUSP_ACC /suspend your account/i
+describe    DP_SUSP_ACC Suspend your account...
+score       DP_SUSP_ACC 1.5
+
+
+
 body        DP_SWEEPSTAKE_AW   /sweepstakes? award/i
 describe    DP_SWEEPSTAKE_AW   Sweepstakes award
 score       DP_SWEEPSTAKE_AW   2.5
