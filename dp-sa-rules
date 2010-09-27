@@ -291,6 +291,17 @@ body        DP_SWEEPSTAKE_AW   /sweepstakes? award/i
 describe    DP_SWEEPSTAKE_AW   Sweepstakes award
 score       DP_SWEEPSTAKE_AW   2.5
 
+body        DP_FUNDS_TRANS /funds transferr?ed/i
+describe    DP_FUNDS_TRANS Funds transferred...
+score       DP_FUNDS_TRANS 1.8
+
+body        DP_MIL_DOLLARS /million.+thousand dollars/i
+describe    DP_MIL_DOLLARS Thousands and missions (of dollars)
+score       DP_MIL_DOLLARS 1.8
+
+full        DP_MY_DEAR /My Dear,/i
+describe    DP_MY_DEAR Don't call me baby^Wdear
+score       DP_MY_DEAR 1.9
 
 
 
