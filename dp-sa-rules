@@ -303,6 +303,25 @@ full        DP_MY_DEAR /My Dear,/i
 describe    DP_MY_DEAR Don't call me baby^Wdear
 score       DP_MY_DEAR 1.9
 
+full        DP_DEAR_WINNER /Dear winner/i
+describe    DP_DEAR_WINNER Dear winner...
+score       DP_DEAR_WINNER 2.2
+
+full        DP_PROMOTION /PROMOTION/
+describe    DP_PROMOTION Promotion all in caps?  Sounds maybe dodgy
+score       DP_PROMOTION 1
+
+full        DP_YAHOO_PROMOTION /YAHOO PROMOTION/
+describe    DP_YAHOO_PROMOTION Yahoo promotion?  Sure....
+score       DP_YAHOO_PROMOTION 2.8
+
+body        DP_EMAIL_FILE /email file/i
+describe    DP_EMAIL_FILE Email file?  Who the hell says that?
+score       DP_EMAIL_FILE 2.0
+
+header      DP_TO_UNDISCLOSED To =~ /undisclosed recipients/
+describe    DP_TO_UNDISCLOSED To undisclosed recipients
+score       DP_TO_UNDISCLOSED 1.6
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
