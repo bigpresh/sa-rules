@@ -323,6 +323,26 @@ header      DP_TO_UNDISCLOSED To =~ /undisclosed recipients/
 describe    DP_TO_UNDISCLOSED To undisclosed recipients
 score       DP_TO_UNDISCLOSED 1.6
 
+full        DP_PROPOSAL_FOR_YOU /I have a (business )?proposal/i
+describe    DP_PROPOSAL_FOR_YOU I have a proposal for you
+score       DP_PROPOSAL_FOR_YOU 1.4
+
+full        DP_PROPOSAL_JUST_4U /proposal just for you/i
+describe    DP_PROPOSAL_JUST_4U A proposal just for you
+score       DP_PROPOSAL_JUST_4U 2.0
+
+# Be careful, this isn't necessarily all that spammy
+full        DP_MILLIONS /\d+,\d+{3},\d+{3}/
+describe    DP_MILLIONS Contains a figure in the millions
+score       DP_MILLIONS 1.2
+
+# For me at least, millions of dollars are more spammy, though
+full        DP_MILLIONS_DOLLARS /\$\d+,\d+{3},\d+{3}/
+describe    DP_MILLIONS_DOLLARS Contains a figure of millions of dollars
+score       DP_MILLIONS_DOLLARS 2.2
+
+
+
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
