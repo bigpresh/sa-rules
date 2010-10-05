@@ -341,7 +341,15 @@ full        DP_MILLIONS_DOLLARS /\$\d+,\d+{3},\d+{3}/
 describe    DP_MILLIONS_DOLLARS Contains a figure of millions of dollars
 score       DP_MILLIONS_DOLLARS 2.2
 
+# Careful, this one will probably hit legitimate mails as well
+body        DP_IF_YOU_NO_LONGER_WANT_SPAM /If you no longer wish to receive/i
+describe    DP_IF_YOU_NO_LONGER_WANT_SPAM Offers unsubscribe instructions
+score       DP_IF_YOU_NO_LONGER_WANT_SPAM 1.6
 
+# Yes, I may be overweight; I can diet, you'll always be a spamming c**t.
+body        DP_START_SLIMMING /start slimming/i
+describe    DP_START_SLIMMING Start slimming?  Why don't you start dying?
+score       DP_START_SLIMMING 3.0
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
