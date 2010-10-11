@@ -393,7 +393,21 @@ full        DP_RECV_YOUR_FUNDS /Receive your (fund|payment)/i
 describe    DP_RECV_YOUR_FUNDS "Receive your payment/funds"
 score       DP_RECV_YOUR_FUNDS 3.0
 
+body        DP_MY_NAME_IS /my name is/i
+describe    DP_MY_NAME_IS "My name is..." (often seen in dating-type spam)
+score       DP_MY_NAME_IS 2.8
 
+body        DP_I_AM_LOOKING_FOR /I am looking for/i
+describe    DP_I_AM_LOOKING_FOR "I am looking for..."
+score       DP_I_AM_LOOKING_FOR 1.5
+
+body        DP_LOOKING_FOR_DATING /I am looking for (?:a )?(?:male|friend|love|date)/i
+describe    DP_LOOKING_FOR_DATING "I am looking for.." dating-type spam
+score       DP_LOOKING_FOR_DATING 3.5
+
+body        DP_WRITE_BACK /write (?:me )?back/i
+describe    DP_WRITE_BACK "Write back..." (common in dating-type spam)
+score       DP_WRITE_BACK 2.6
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
