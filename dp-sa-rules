@@ -351,6 +351,49 @@ body        DP_START_SLIMMING /start slimming/i
 describe    DP_START_SLIMMING Start slimming?  Why don't you start dying?
 score       DP_START_SLIMMING 3.0
 
+full        DP_BANK_OF /bank of/i
+describe    DP_BANK_OF "Bank of..."
+score       DP_BANK_OF 1.5
+
+full        DP_BANK_OF_NIGERIA /Bank of Nigeria/i
+describe    DP_BANK_OF_NIGERIA "Bank of Nigeria"
+score       DP_BANK_OF_NIGERIA 2.8
+
+full        DP_DEPUTY_GOVERNOR /Deputy Governor/i
+describe    DP_DEPUTY_GOVERNOR "Deputy Governor"
+score       DP_DEPUTY_GOVERNOR 1.8
+
+full        DP_FOREX /forex/i
+describe    DP_FOREX "Forex"
+score       DP_FOREX 1.8
+
+full        DP_YOUR_FILE /your file/i
+describe    DP_YOUR_FILE "Your file"
+score       DP_YOUR_FILE 1.0
+
+full        DP_RECV_YOUR_FUNDS /receive your (payment|fund)/i
+describe    DP_RECV_YOUR_FUNDS 2.0
+score      
+describe    DP_BANK_OF_NIGERIA "Bank of Nigeria"
+score       DP_BANK_OF_NIGERIA 2.8
+
+full        DP_DEPUTY_GOVERNOR /Deputy Governor/i
+describe    DP_DEPUTY_GOVERNOR "Deputy Governor"
+score       DP_DEPUTY_GOVERNOR 1.8
+
+full        DP_FOREX /forex/i
+describe    DP_FOREX "Forex"
+score       DP_FOREX 1.8
+
+full        DP_YOUR_FILE /your file/i
+describe    DP_YOUR_FILE "Your file"
+score       DP_YOUR_FILE 1.0
+
+full        DP_RECV_YOUR_FUNDS /Receive your (fund|payment)/i
+describe    DP_RECV_YOUR_FUNDS "Receive your payment/funds"
+score       DP_RECV_YOUR_FUNDS 3.0
+
+
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
