@@ -409,6 +409,30 @@ body        DP_WRITE_BACK /write (?:me )?back/i
 describe    DP_WRITE_BACK "Write back..." (common in dating-type spam)
 score       DP_WRITE_BACK 2.6
 
+body        DP_FOREIGN_ASSISTANCE /foreign assistance/i
+describe    DP_FOREIGN_ASSISTANCE "Foreign assistance"
+score       DP_FOREIGN_ASSISTANCE 3.0
+
+body        DP_RECEIVE_MONEY /receive (this|your)money/i
+describe    DP_RECEIVE_MONEY "Receive your/this money"
+score       DP_RECEIVE_MONEY 2.8
+
+body        DP_WILLING_TO_HELP /willing to help me/i
+describe    DP_WILLING_TO_HELP "Willing to help me..."
+score       DP_WILLING_TO_HELP 1.8
+
+body        DP_HELLO_FROM /Hello from/i
+describe    DP_HELLO_FROM "Hello from..."
+score       DP_HELLO_FROM 1.0
+
+body        DP_HELLO_FROM /Hello from (Mr|Mister|Ms|Miss|Mrs)/i
+describe    DP_HELLO_FROM "Hello from...Mr/Miss/etc"
+score       DP_HELLO_FROM 1.8
+
+
+
+
+
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
 describe        RELAYCOUNTRY_CN Relayed through China
