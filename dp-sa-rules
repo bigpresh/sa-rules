@@ -332,7 +332,7 @@ describe    DP_PROPOSAL_JUST_4U A proposal just for you
 score       DP_PROPOSAL_JUST_4U 2.0
 
 # Be careful, this isn't necessarily all that spammy
-full        DP_MILLIONS /\d+,\d+{3},\d+{3}/
+full        DP_MILLIONS /\d+,\d{3},\d{3}/
 describe    DP_MILLIONS Contains a figure in the millions
 score       DP_MILLIONS 1.2
 
@@ -429,7 +429,13 @@ body        DP_HELLO_FROM /Hello from (Mr|Mister|Ms|Miss|Mrs)/i
 describe    DP_HELLO_FROM "Hello from...Mr/Miss/etc"
 score       DP_HELLO_FROM 1.8
 
+body        DP_GOT_YOUR_DETAILS /got your (e?mail|contact|details)/i
+describe    DP_GOT_YOUR_DETAILS "Got your details from..."
+score       DP_GOT_YOUR_DETAILS 3.0
 
+full        DP_DODGY_EMAIL_ADDRESSES /@(yahoo|live)\.com/i
+describe    DP_DODGY_EMAIL_ADDRESSES "Contains a webmail address common for spam"
+score       DP_DODGY_EMAIL_ADDRESSES 1.8
 
 
 
