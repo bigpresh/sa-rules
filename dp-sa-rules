@@ -337,7 +337,7 @@ describe    DP_MILLIONS Contains a figure in the millions
 score       DP_MILLIONS 1.2
 
 # For me at least, millions of dollars are more spammy, though
-full        DP_MILLIONS_DOLLARS /\$\d+,\d+{3},\d+{3}/
+full        DP_MILLIONS_DOLLARS /\$\d+,\d{3},\d{3}/
 describe    DP_MILLIONS_DOLLARS Contains a figure of millions of dollars
 score       DP_MILLIONS_DOLLARS 2.2
 
