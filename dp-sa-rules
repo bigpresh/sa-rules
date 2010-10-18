@@ -437,6 +437,9 @@ full        DP_DODGY_EMAIL_ADDRESSES /@(yahoo|live)\.com/i
 describe    DP_DODGY_EMAIL_ADDRESSES "Contains a webmail address common for spam"
 score       DP_DODGY_EMAIL_ADDRESSES 1.8
 
+full        DP_LOAN_OFFER /loan offer/i
+describe    DP_LOAN_OFFER "Loan offer..."
+score       DP_LOAN_OFFER 3.0
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
