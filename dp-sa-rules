@@ -373,9 +373,10 @@ score       DP_YOUR_FILE 1.0
 
 full        DP_RECV_YOUR_FUNDS /receive your (payment|fund)/i
 describe    DP_RECV_YOUR_FUNDS 2.0
-score      
+
+full        DP_BANK_OF_NIGERIA /Bank of Nigeria/i
 describe    DP_BANK_OF_NIGERIA "Bank of Nigeria"
-score       DP_BANK_OF_NIGERIA 2.8
+score       DP_BANK_OF_NIGERIA 3.4
 
 full        DP_DEPUTY_GOVERNOR /Deputy Governor/i
 describe    DP_DEPUTY_GOVERNOR "Deputy Governor"
@@ -440,6 +441,19 @@ score       DP_DODGY_EMAIL_ADDRESSES 1.8
 full        DP_LOAN_OFFER /loan offer/i
 describe    DP_LOAN_OFFER "Loan offer..."
 score       DP_LOAN_OFFER 3.0
+
+body        DP_MY_DEAREST /My Dear(est)?/i
+describe    DP_MY_DEAREST "My Dearest... (that's not very dear)"
+score       DP_MY_DEAREST 3.5
+
+body        DP_PLEASE_WRITE_ME /Please write me/i
+describe    DP_PLEASE_WRITE_ME "Please write me..."
+score       DP_PLEASE_WRITE_ME 2.2
+
+body        DP_MY_PICTURES /my pictures/i
+describe    DP_MY_PICTURES "My pictures" (often seen in dating-type spam)
+score       DP_MY_PICTURES 1.8
+
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
