@@ -454,6 +454,23 @@ body        DP_MY_PICTURES /my pictures/i
 describe    DP_MY_PICTURES "My pictures" (often seen in dating-type spam)
 score       DP_MY_PICTURES 1.8
 
+body        DP_HOMEBIZ /home biz/i
+describe    DP_HOMEBIZ Mentions a "home biz"
+score       DP_HOMEBIZ 2.0
+
+body        DP_THISISREMARKABLE /This is (truly )?remarkable/i
+describe    DP_THISISREMARKABLE "This is remarkable" - really?
+score       DP_THISISREMARKABLE 1.5
+
+body        DP_TOBEREMOVED /to be removed/i
+describe    DP_TOBEREMOVED Contains "to be removed"
+score       DP_TOBEREMOVED 1.0
+
+body        DP_MARQUESBRIGHAM /Marques Brigham/
+describe    DP_MARQUESBRIGHAM I received several spams from "Marques Brigham"
+score       DP_MARQUESBRIGHAM 6.0
+
+
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
