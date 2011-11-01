@@ -470,7 +470,7 @@ body        DP_MARQUESBRIGHAM /Marques Brigham/
 describe    DP_MARQUESBRIGHAM I received several spams from "Marques Brigham"
 score       DP_MARQUESBRIGHAM 6.0
 
-full        DP_FAKE_LOTTERY /(Google|Yahoo (Mail)?)|Microsoft|MSN|Coca Cola|UK Euro Millions)(Lottery|Award)/i
+full        DP_FAKE_LOTTERY /(Google|Yahoo (Mail)?|Microsoft|MSN|Coca Cola|Euro Millions).{1,20}(Lottery|Award)/i
 describe    DP_FAKE_LOTTERY Fake lotteries/awards using common company names
 score       DP_FAKE_LOTTERY 5.0
 
@@ -482,7 +482,7 @@ full        DP_YOU_WON /you won/i
 describe    DP_YOU_WON You won something
 score       DP_YOU_WON 2.0
 
-full        DP_BIG_MONEY /[$£][0-9,.]{6,}/
+full        DP_BIG_MONEY /[\$£][0-9,.]{6,}/
 describe    DP_BIG_MONEY Mentions a large amount of money
 score       DP_BIG_MONEY 3.4
 
