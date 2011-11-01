@@ -470,8 +470,45 @@ body        DP_MARQUESBRIGHAM /Marques Brigham/
 describe    DP_MARQUESBRIGHAM I received several spams from "Marques Brigham"
 score       DP_MARQUESBRIGHAM 6.0
 
+full        DP_FAKE_LOTTERY /(Google|Yahoo (Mail)?)|Microsoft|MSN|Coca Cola|UK Euro Millions)(Lottery|Award)/i
+describe    DP_FAKE_LOTTERY Fake lotteries/awards using common company names
+score       DP_FAKE_LOTTERY 5.0
 
+full        DP_EMAIL_ACC_HOLDER /email account holder/i
+describe    DP_EMAIL_ACC_HOLDER "Email account holder" - often seen in fake lottery scams etc
+score       DP_EMAIL_ACC_HOLDER 3.7
 
+full        DP_YOU_WON /you won/i
+describe    DP_YOU_WON You won something
+score       DP_YOU_WON 2.0
+
+full        DP_BIG_MONEY /[$£][0-9,.]{6,}/
+describe    DP_BIG_MONEY Mentions a large amount of money
+score       DP_BIG_MONEY 3.4
+
+full        DP_INVESTMENT_OFFER /investment offer/i
+describe    DP_INVESTMENT_OFFER Investment offers
+score       DP_INVESTMENT_OFFER 3.2
+
+full        DP_EMPLOYMENT_OPP /(career|employment) opportunity/i
+describe    DP_EMPLOYMENT_OPP Employment/career opportunity
+score       DP_EMPLOYMENT_OPP 3.6
+
+full        DP_RECEIVE_PAYMENTS /receive payments/i
+describe    DP_RECEIVE_PAYMENTS Receive payments
+score       DP_RECEIVE_PAYMENTS 2.8
+
+full        DP_ONLINE_CASINO /online casino/i
+describe    DP_ONLINE_CASINO Online casinos
+score       DP_ONLINE_CASINO 3.6
+
+full        DP_REJECTED_TRANSACTION /rejected (\S+ )?transaction/i
+describe    DP_REJECTED_TRANSACTION Rejected transactions
+score       DP_REJECTED_TRANSACTION 3.5
+
+full        DP_VIEW_ATTACHED /view (the )?attached/i
+describe    DP_VIEW_ATTACHED "View the attached..."
+score       DP_VIEW_ATTACHED 2.5
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
