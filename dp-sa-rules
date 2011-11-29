@@ -619,6 +619,34 @@ header      DP_FROM_CLAIM From =~ /claim/i
 describe    DP_FROM_CLAIM From address contains "claim"
 score       DP_FROM_CLAIM 2.5
 
+# What's an ACH transaction?
+full        DP_ACH_TRANS /ACH trans(action|fer)/i
+describe    DP_ACH_TRANS Mentions "ACH transaction/transfer"
+score       DP_ACH_TRANS 3.4
+
+full        DP_OTHER_FI /other financial institution/i
+describe    DP_OTHER_FI "Other financial institution"
+score       DP_OTHER_FI 1.8
+
+body        DP_REJECT_REASON /reason for rejection/i
+score       DP_REJECT_REASON 1.6
+
+body        DP_WAS_REJECTED_BY /was rejected by/i
+score       DP_WAS_REJECTED_BY 1.6
+
+body        DP_ID_NUM /ID:\s*\d+/i
+describe    DP_ID_NUM Contains "ID: xxx"
+score       DP_ID_NUM 2.2
+
+body        DP_WEBMAIL_HELP /webmail help\s*desk/i
+describe    DP_WEBMAIL_HELP "Webmail help desk"
+score       DP_WEBMAIL_HELP 2.5
+
+body        DP_SYSAD /systemu? administrator/i
+score       DP_SYSAD 1.2
+
+
+
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
 describe        RELAYCOUNTRY_CN Relayed through China
