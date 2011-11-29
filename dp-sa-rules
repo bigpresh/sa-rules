@@ -65,6 +65,63 @@ body        DP_PAY_OFFICER     /payment officer/i
 describe    DP_PAY_OFFICER     Mentions payment officer
 score       DP_PAY_OFFICER     3.0
 
+body        DP_CLAIM_AGENT     /claim agent/i
+describe    DP_CLAIM_AGENT     Mentions claim agent
+score       DP_CLAIM_AGENT     3.0
+
+body        DP_ATTACH_WINNING  /attached to winning/i
+describe    DP_ATTACH_WINNING  "attached to winning..."
+score       DP_ATTACH_WINNING  3.0
+
+body        DP_BATCH_NO        /batch n(o|umber)/i
+describe    DP_BATCH_NO        Mentions a batch number (common in lotto scams)
+score       DP_BATCH_NO        1.5
+
+body        DP_REF_NO          /ref(erence)? n(o|umber)/i
+describe    DP_REF_NO          Mentions a reference number (common in lotto scams)
+score       DP_REF_NO          1.5
+
+header      DP_SUBJ_CONGRAT    Subject =~ /Congrat|(ulation|s)/i
+describe    DP_SUBJ_CONGRAT    Congratulations in subject
+score       DP_SUBJ_CONGRAT    1.2
+
+body        DP_TO_CLAIM        /to claim your/i
+describe    DP_TO_CLAIM        Mentions "to claim your..."
+score       DP_TO_CLAIM        2.2
+
+body        DP_FORM_YOURNAME   /Your(full |first |last )? name\s*:/i
+describe    DP_FORM_YOURNAME   Form-like "Your name:"
+score       DP_FORM_YOURNAME   1.5
+
+body        DP_FRM_ADDRESS     /Address\s*:/i
+describe    DP_FRM_ADDRESS     Form-like "Address:"
+score       DP_FRM_ADDRESS     1.5
+
+body        DP_FORM_NUMBER     /Number\s*:/i
+describe    DP_FORM_NUMBER     Form-like "Number:"
+score       DP_FORM_NUMBER     1.5
+
+body        DP_CITYTOWN        /City\s*\/\s*town/i
+describe    DP_CITYTOWN        Mentions "city/town"
+score       DP_CITYTOWN        1.5
+
+body        DP_ZIPCODE         /zip\s?code/i
+describe    DP_ZIPCODE         Mentions a ZIP code
+score       DP_ZIPCODE         1.0
+
+header      DP_SUBJ_FROM       Subject =~ /^From/i
+describe    DP_SUBJ_FROM       Subject starts with "From"
+score       DP_SUBJ_FROM       2.0
+
+body        DP_SIRMADAM        /Sir\/Madam/i
+describe    DP_SIRMADAM        Contains "Sir/Madam" - very personal email
+score       DP_SIRMADAM        1.8
+
+body        DP_AGENT_NAME      /Agent Name/i
+describe    DP_AGENT_NAME      Mentions "agent name"
+score       DP_AGENT_NAME      2.0
+
+
 body        DP_BOARD_OF        /board of/i
 describe    DP_BOARD_OF        Mentions board of...
 score       DP_BOARD_OF        2.6
@@ -72,6 +129,22 @@ score       DP_BOARD_OF        2.6
 body        DP_US_DOLLARS      /us dollars/i
 describe    DP_US_DOLLARS      Mentions US dollars
 score       DP_US_DOLLARS      2.5
+
+body        DP_PROMO_CENTER    /promo(tion)? cent(re|er)/i
+describe    DP_PROMO_CENTER    Mentions a "promo center"
+score       DP_PROMO_CENTER    2.5
+
+body        DP_CHOSEN_WINNER   /chosen as a winner/i
+describe    DP_CHOSEN_WINNER   Mentions "chosen as a winner"
+score       DP_CHOSEN_WINNER   2.8
+
+body        DP_NUM_WORD        /\d+\s+\(\w+\)/i
+describe    DP_NUM_WORD        Number then word (e.g. '6 (six)')
+score       DP_NUM_WORD        2.8
+
+body        DP_PROVIDE_INFO    /provide the following/i
+describe    DP_PROVIDE_INFO    Provide the following info
+score       DP_PROVIDE_INFO    2.5
 
 body        DP_AWARDED         /you have been awarded/i
 describe    DP_AWARDED         Mentions being awarded something
@@ -434,9 +507,9 @@ body        DP_GOT_YOUR_DETAILS /got your (e?mail|contact|details)/i
 describe    DP_GOT_YOUR_DETAILS "Got your details from..."
 score       DP_GOT_YOUR_DETAILS 3.0
 
-full        DP_DODGY_EMAIL_ADDRESSES /@(yahoo|live)\.com/i
+full        DP_DODGY_EMAIL_ADDRESSES /@(yahoo|live|hotmail)\./i
 describe    DP_DODGY_EMAIL_ADDRESSES "Contains a webmail address common for spam"
-score       DP_DODGY_EMAIL_ADDRESSES 1.8
+score       DP_DODGY_EMAIL_ADDRESSES 2.2
 
 full        DP_LOAN_OFFER /loan offer/i
 describe    DP_LOAN_OFFER "Loan offer..."
@@ -509,6 +582,42 @@ score       DP_REJECTED_TRANSACTION 3.5
 full        DP_VIEW_ATTACHED /view (the )?attached/i
 describe    DP_VIEW_ATTACHED "View the attached..."
 score       DP_VIEW_ATTACHED 2.5
+
+body        DP_GETBACKTOUS /get back to us/i
+describe    DP_GETBACKTOUS Mentions "get back to us"
+score       DP_GETBACKTOUS 2.3
+
+header      DP_SUBJ_PROPOSAL Subject =~ /proposal/i
+describe    DP_SUBJ_PROPOSAL "Proposal" in subject
+score       DP_SUBJ_PROPOSAL 2.0
+
+header      DP_FROM_BARRISTER From =~ /barrister/i
+describe    DP_FROM_BARRISTER From a barrister, apparently
+score       DP_FROM_BARRISTER 2.5
+
+body        DP_EMAIL_ID /e-?mail id/
+describe    DP_EMAIL_ID What's an "email id"?
+score       DP_EMAIL_ID 2.8
+
+body        DP_EMAIL_HAS /your e-?mail (address|id) has/i
+describe    DP_EMAIL_HAS "your email address has..."
+score       DP_EMAIL_HAS 2.8
+
+body        DP_PROMOTION_MANAGER /promotion manager/i
+describe    DP_PROMOTION_MANAGER Mentions a "promotion manager"
+score       DP_PROMOTION_MANAGER 2.4
+
+body        DP_TO_CLAIM_PRIZE /to claim (your|the) prize/i
+describe    DP_TO_CLAIM_PRIZE "To claim your prize..."
+score       DP_TO_CLAIM_PRIZE 3.0
+
+body        DP_SEND_IT_TO /send it to/i
+describe    DP_SEND_IT_TO "Send it to..." (common in lotto-type scams)
+score       DP_SEND_IT_TO 1.6
+
+header      DP_FROM_CLAIM From =~ /claim/i
+describe    DP_FROM_CLAIM From address contains "claim"
+score       DP_FROM_CLAIM 2.5
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
