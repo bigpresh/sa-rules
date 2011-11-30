@@ -81,7 +81,7 @@ body        DP_REF_NO          /ref(erence)? n(o|umber)/i
 describe    DP_REF_NO          Mentions a reference number (common in lotto scams)
 score       DP_REF_NO          1.5
 
-header      DP_SUBJ_CONGRAT    Subject =~ /Congrat|(ulation|s)/i
+header      DP_SUBJ_CONGRAT    Subject =~ /Congrat(ulation|s)/i
 describe    DP_SUBJ_CONGRAT    Congratulations in subject
 score       DP_SUBJ_CONGRAT    1.2
 
