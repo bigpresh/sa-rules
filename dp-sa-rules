@@ -142,6 +142,10 @@ body        DP_NUM_WORD        /\d+\s+\(\w+\)/i
 describe    DP_NUM_WORD        Number then word (e.g. '6 (six)')
 score       DP_NUM_WORD        2.8
 
+body        DP_NUM_PAREN       /\(\d+\)/
+describe    DP_NUM_PAREN       Number in parenthesis
+score       DP_NUM_PAREN       1.8
+
 body        DP_PROVIDE_INFO    /provide the following/i
 describe    DP_PROVIDE_INFO    Provide the following info
 score       DP_PROVIDE_INFO    2.5
