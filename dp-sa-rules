@@ -649,6 +649,18 @@ score       DP_WEBMAIL_HELP 2.5
 body        DP_SYSAD /systemu? administrator/i
 score       DP_SYSAD 1.2
 
+full        DP_CANITRUSTYOU /Can I trust you/i
+describe    DP_CANITRUSTYOU Asks if they can trust you (common in phishing)
+score       DP_CANITRUSTYOU 2.7
+
+header      DP_SUBJ_RESPOND Subject =~ /RESPOND/
+describe    DP_SUBJ_RESPOND Subject contains "RESPOND"
+score       DP_SUBJ_RESPOND 1.5
+
+header      DP_REPLY_NEEDED Subject =~ /(Response|Reply) needed/i
+describe    DP_REPLY_NEEDED Subject contains "Response/reply needed"
+score       DP_REPLY_NEEDED 2.0
+
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
