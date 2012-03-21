@@ -673,6 +673,14 @@ header      DP_REPLY_NEEDED Subject =~ /(Response|Reply) needed/i
 describe    DP_REPLY_NEEDED Subject contains "Response/reply needed"
 score       DP_REPLY_NEEDED 2.0
 
+full        DP_MARKETING_LISTS /marketing lists/i
+describe    DP_MARKETING_LISTS Mentions marketing lists
+score       DP_MARKETING_LISTS 1.8
+
+# often seen in "buy this spam list" spam
+full        DP_EMAILS_IN_TOTAL /email(s| addresses) in total/i
+describe    DP_EMAILS_IN_TOTAL Mentions total number of emails
+score       DP_EMAILS_IN_TOTAL 1.5
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
