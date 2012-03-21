@@ -653,6 +653,18 @@ full        DP_CANITRUSTYOU /Can I trust you/i
 describe    DP_CANITRUSTYOU Asks if they can trust you (common in phishing)
 score       DP_CANITRUSTYOU 2.7
 
+full        DP_TITLECASE_LOTS /([A-Z][a-z]+ ){8,}/
+describe    DP_TITLECASE_LOTS Lots Of Title Cased Words As Used By Retards
+score       DP_TITLECASE_LOTS 2.8
+
+full        DP_MAILBOX_EXCEEDED /mailbox has exceeded/i
+describe    DP_MAILBOX_EXCEEDED Mailbox exceeded some limit
+score       DP_MAILBOX_EXCEEDED 2.8
+
+full        DP_YOUR_ADMINISTRATOR /your administrator/i
+describe    DP_YOUR_ADMINISTRATOR "Your administrator" - you mean, me?
+score       DP_YOUR_ADMINISTRATOR 1.8
+
 header      DP_SUBJ_RESPOND Subject =~ /RESPOND/
 describe    DP_SUBJ_RESPOND Subject contains "RESPOND"
 score       DP_SUBJ_RESPOND 1.5
