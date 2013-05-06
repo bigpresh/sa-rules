@@ -140,7 +140,7 @@ score       DP_CHOSEN_WINNER   2.8
 
 body        DP_NUM_WORD        /\d+\s+\(\w+\)/i
 describe    DP_NUM_WORD        Number then word (e.g. '6 (six)')
-score       DP_NUM_WORD        2.8
+score       DP_NUM_WORD        1.8
 
 body        DP_NUM_PAREN       /\(\d+\)/
 describe    DP_NUM_PAREN       Number in parenthesis
@@ -681,6 +681,19 @@ score       DP_MARKETING_LISTS 1.8
 full        DP_EMAILS_IN_TOTAL /email(s| addresses) in total/i
 describe    DP_EMAILS_IN_TOTAL Mentions total number of emails
 score       DP_EMAILS_IN_TOTAL 1.5
+
+full        DP_X_CAPSULES /\d+ (capsules|tabs)/i
+describe    DP_X_CAPSULES Mentions x capsules/tabs
+score       DP_X_CAPSULES 2.6
+
+full        DP_EXTRA_CAPSULES /extra (capsules|tabs|tablets)/i
+describe    DP_EXTRA_CAPSULES Mentions extra capsules/tabs/tablets
+score       DP_EXTRA_CAPSULES 2.8
+
+full        DP_PRICE_USD /[0-9.]+\s*USD/
+describe    DP_PRICE_USD Contains a price in USD
+score       DP_PRICE_USD 1.0
+
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
