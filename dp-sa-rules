@@ -695,6 +695,9 @@ describe    DP_PRICE_USD Contains a price in USD
 score       DP_PRICE_USD 1.0
 
 
+header      DP_SUBJ_REVIEW Subject =~ /review/i
+describe    DP_SUBJ_REVIEW Subject contains "review"
+score       DP_SUBJ_REVIEW -2.2
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
