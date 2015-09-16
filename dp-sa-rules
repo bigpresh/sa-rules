@@ -697,7 +697,28 @@ score       DP_PRICE_USD 1.0
 
 header      DP_SUBJ_REVIEW Subject =~ /review/i
 describe    DP_SUBJ_REVIEW Subject contains "review"
-score       DP_SUBJ_REVIEW -2.2
+score       DP_SUBJ_REVIEW -2.5
+
+header      DP_SUBJ_PRODTEST Subject =~ /products? test/i
+describe    DP_SUBJ_PRODTEST Subject contains "product test"
+score       DP_SUBJ_PRODTEST -2.0
+
+
+header      DP_SUBJ_ATTENTION Subject =~ /Attention:/i
+describe    DP_SUBJ_ATTENTION Subject contains "Attention:"
+score       DP_SUBJ_ATTENTION 1.0
+
+header      DP_SUBJ_GIRLSWAITING Subject =~ /girls (are )?waiting/i
+describe    DP_SUBJ_GIRLSWAITING Subject contains "girls waiting"
+score       DP_SUBJ_GIRLSWAITING 6.0
+
+header      DP_SUBJ_LIKETOMEET Subject =~ /would like to meet/i
+describe    DP_SUBJ_LIKETOMEET Subject contains "would like to meet"
+score       DP_SUBJ_LIKETOMEET 2.9
+
+
+
+
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
