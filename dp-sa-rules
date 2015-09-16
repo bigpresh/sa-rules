@@ -717,6 +717,15 @@ describe    DP_SUBJ_LIKETOMEET Subject contains "would like to meet"
 score       DP_SUBJ_LIKETOMEET 2.9
 
 
+header      DP_SUBJ_EMAIL_STORAGE_WARNING Subject =~ /email storage (warning|limit|exceeded)/i
+describe    DP_SUBJ_EMAIL_STORAGE_WARNING Subject contains "email storage warning" etc
+score       DP_SUBJ_EMAIL_STORAGE_WARNING 4.0
+
+full        DP_OUR_EMAIL_MARKETING /our email marketing/i
+describe    DP_OUR_EMAIL_MARKETING Mentions "our email marketing"
+score       DP_OUR_EMAIL_MARKETING 3.0
+
+
 
 
 
