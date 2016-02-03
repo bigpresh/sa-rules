@@ -725,7 +725,7 @@ full        DP_OUR_EMAIL_MARKETING /our email marketing/i
 describe    DP_OUR_EMAIL_MARKETING Mentions "our email marketing"
 score       DP_OUR_EMAIL_MARKETING 3.0
 
-header    DP_DATING_CRAP_INSTAQUICKIE Subject =~ /(Insta(Quickie|Sex|Date|Cheat)|SnapBangMsg|HotH00kup|SexiSnap|F?ukBuddy)/
+header    DP_DATING_CRAP_INSTAQUICKIE Subject =~ /(Insta(Quickie|Sex|Date|Cheat)|SnapBangMsg|HotH00kup|SexiSnap|F??kBuddy|SnapF?ck)/
 describe  DP_DATING_CRAP_INSTAQUICKIE "Various spammy dating site type cockends"
 score     DP_DATING_CRAP_INSTAQUICKIE 9.0
 
