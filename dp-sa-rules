@@ -733,7 +733,17 @@ full      DP_DATING_CRAP_LOOK_PICS /look (through|at) my (pics?|photos?)/
 describe  DP_DATING_CRAP_LOOK_PICS "Look through my pics"
 score     DP_DATING_CRAP_LOOK_PICS 4.5
 
+full      DP_DATING_CRAP_H00KUP /h00kup/i
+describe  DP_DATING_CRAP_H00KUP "Contains 'h00kup'"
+score     DP_DATING_CRAP_H00KUP 5.0
 
+full      DP_DATING_HORNY /horny/i
+describe  DP_DATING_HORNY Contains 'horny'
+score     DP_DATING_HORNY 3.2
+
+full      DP_NEW_REQUEST_ALERT /new.+(request|alert)/i
+describe  DP_NEW_REQUEST_ALERT "Contains 'new request' or 'new alert' etc"
+score     DP_NEW_REQUEST_ALERT 1.8
 
 
 
