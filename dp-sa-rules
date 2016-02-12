@@ -725,7 +725,7 @@ full        DP_OUR_EMAIL_MARKETING /our email marketing/i
 describe    DP_OUR_EMAIL_MARKETING Mentions "our email marketing"
 score       DP_OUR_EMAIL_MARKETING 3.0
 
-header    DP_DATING_CRAP_INSTAQUICKIE Subject =~ /(Insta(Quickie|Sex|Date|Cheat|Hookup|Affair)|SnapBangMsg|HotH00kup|SexiSnap|F..kBuddy|SnapF.ck)/
+header    DP_DATING_CRAP_INSTAQUICKIE Subject =~ /(Insta(Quickie|Sex|Date|Cheat|Hookup|Affair|F??k)|SnapBangMsg|HotH00kup|SexiSnap|F..kBuddy|SnapF.ck)/
 describe  DP_DATING_CRAP_INSTAQUICKIE "Various spammy dating site type cockends"
 score     DP_DATING_CRAP_INSTAQUICKIE 9.0
 
@@ -741,10 +741,37 @@ full      DP_DATING_HORNY /horny/i
 describe  DP_DATING_HORNY Contains 'horny'
 score     DP_DATING_HORNY 3.2
 
-full      DP_NEW_REQUEST_ALERT /new.+(request|alert)/i
+full      DP_NEW_REQUEST_ALERT /new.{1,15}(request|alert|match)/i
 describe  DP_NEW_REQUEST_ALERT "Contains 'new request' or 'new alert' etc"
-score     DP_NEW_REQUEST_ALERT 1.8
+score     DP_NEW_REQUEST_ALERT 1.6
 
+full      DP_WANT_FUCK /want.{0,10}[fs].ck/
+describe  DP_WANT_FUCK Want to fuck, etc
+score     DP_WANT_FUCK 2.0
+
+full      DP_MY_PICS /my.{1,10}pics/
+describe  DP_MY_PICS See my pics, see my pics...
+score     DP_MY_PICS 1.2
+
+full      DP_IM_XXF /I.?m \d+\/F/
+describe  DP_IM_XXF "Contains e.g. I'm 28/F"
+score     DP_IM_XXF 2.5
+
+full      DP_WANT_FUN /want to have some fun/
+describe  DP_WANT_FUN "Contains 'want to have some fun'"
+score     DP_WANT_FUN 2.2
+
+full      DP_CHECKOUT_PROFILE /(see|look at|check\s?out|visit) my profile/
+describe  DP_CHECKOUT_PROFILE "Contains e.g. 'check out my profile'"
+score     DP_CHECKOUT_PROFILE 2.2
+
+full      DP_BIGBOOBS /big b[o0]{2}bs/
+describe  DP_BIGBOOBS "Mentions big boobs"
+score     DP_BIGBOOBS 1.7
+
+header    DP_PHPMAILER X-Mailer =~ /PHPMailer/
+describe  DP_PHPMAILER "Sent with PHPMailer"
+score     DP_PHPMAILER 1.5
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
