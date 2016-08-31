@@ -773,6 +773,17 @@ header    DP_PHPMAILER X-Mailer =~ /PHPMailer/
 describe  DP_PHPMAILER "Sent with PHPMailer"
 score     DP_PHPMAILER 1.5
 
+full      DP_EGAGTROM /reverse mortgage/i
+describe  DP_EGAGTROM "Talks about reverse mortgages"
+score     DP_EGAGTROM 5.0
+
+full      DP_ATM_CARD /ATM card/i
+describe  DP_ATM_CARD "Talks about ATM cards (that's too US-centric)"
+score     DP_ATM_CARD 4.0
+
+
+
+
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
