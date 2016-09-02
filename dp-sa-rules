@@ -782,7 +782,17 @@ describe  DP_ATM_CARD "Talks about ATM cards (that's too US-centric)"
 score     DP_ATM_CARD 4.0
 
 
+full      DP_HERPES /herpes virus/
+describe  DP_HERPES "Spam is the herpes of the Internet"
+score     DP_HERPES 2.0
 
+full      DP_HERPES_PROTOCOL /herpes protocol/
+describe  DP_HERPES_PROTOCOL "Herpes protocol"
+score     DP_HERPES_PROTOCOL 5.0
+
+full      DP_LOOKING_FOR_LOAN /looking.+(finance|loan|mortgage)/
+describe  DP_LOOKING_FOR_LOAN "Looking for loan/refinance etc"
+describe  DP_LOOKING_FOR_LOAN 4.0
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
