@@ -794,6 +794,11 @@ full      DP_LOOKING_FOR_LOAN /looking.+(finance|loan|mortgage)/
 describe  DP_LOOKING_FOR_LOAN "Looking for loan/refinance etc"
 describe  DP_LOOKING_FOR_LOAN 4.0
 
+header    DP_UPDATE_YOUR_ACCOUNT Subject =~ /up(date|grade) your )?account/
+describe  DP_UPDATE_YOUR_ACCOUNT "Update your account" etc
+score     DP_UPDATE_YOUR_ACCOUNT 3.0
+
+
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
