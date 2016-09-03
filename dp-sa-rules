@@ -792,7 +792,7 @@ score     DP_HERPES_PROTOCOL 5.0
 
 full      DP_LOOKING_FOR_LOAN /looking.+(finance|loan|mortgage)/
 describe  DP_LOOKING_FOR_LOAN "Looking for loan/refinance etc"
-describe  DP_LOOKING_FOR_LOAN 4.0
+score     DP_LOOKING_FOR_LOAN 4.0
 
 header    DP_UPDATE_YOUR_ACCOUNT Subject =~ /up(date|grade) your )?account/
 describe  DP_UPDATE_YOUR_ACCOUNT "Update your account" etc
