@@ -805,6 +805,15 @@ header    DP_NEWLY_INSTALLED_SSL_SERVER Subject =~ /installed ssl server/
 describe  DP_NEWLY_INSTALLED_SSL_SERVER "talks about 'newly installed SSL server'
 score     DP_NEWLY_INSTALLED_SSL_SERVER 3.5
 
+header    DP_CHATURBATE From =~ /Chaturbate/i
+describe  DP_CHATURBATE What a load of wank
+score     DP_CHATURBATE 5.0
+
+
+
+
+
+
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
