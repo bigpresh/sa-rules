@@ -811,8 +811,25 @@ score     DP_CHATURBATE 5.0
 
 
 
+full      DP_DO_OR_DONT_DO /(don'?t (ever )?)?(do|eat) this/
+describe  DP_DO_OR_DONT_DO "Do this ..(or don't do...)"
+score     DP_DO_OR_DONT_DO 1.8
 
+full      DP_NOTIFICATION_LETTER /notification letter/
+describe  DP_NOTIFICATION_LETTER "notification letter"
+score     DP_NOTIFICATION_LETTER 2.5
 
+full      DP_GOOGLE_USER /Dear (Google|Microsoft) user/
+describe  DP_GOOGLE_USER "Dear Google user"
+score     DP_GOOGLE_USER 3.5
+
+full      DP_TOENAIL_FUNGUS /toenail fungus/
+describe  DP_TOENAIL_FUNGUS "Mentions toenail fungus (eww)"
+score     DP_TOENAIL_FUNGUS 3.0
+
+full      DP_WEIRD_TRICK /weird trick/
+describe  DP_WEIRD_TRICK "weird tricks
+score     DP_WEIRD_TRICK 1.8
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
