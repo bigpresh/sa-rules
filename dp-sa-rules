@@ -547,7 +547,7 @@ body        DP_MARQUESBRIGHAM /Marques Brigham/
 describe    DP_MARQUESBRIGHAM I received several spams from "Marques Brigham"
 score       DP_MARQUESBRIGHAM 6.0
 
-full        DP_FAKE_LOTTERY /(Google|Yahoo (Mail)?|Microsoft|MSN|Coca Cola|Euro Millions).{1,20}(Lottery|Award)/i
+full        DP_FAKE_LOTTERY /(Google|Yahoo(\s?Mail)?|Microsoft|MSN|Coca.?Cola|Euro\s?Millions).{1,20}(Lottery|Award)/i
 describe    DP_FAKE_LOTTERY Fake lotteries/awards using common company names
 score       DP_FAKE_LOTTERY 5.0
 
