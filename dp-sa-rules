@@ -828,8 +828,22 @@ describe  DP_TOENAIL_FUNGUS "Mentions toenail fungus (eww)"
 score     DP_TOENAIL_FUNGUS 3.0
 
 full      DP_WEIRD_TRICK /weird trick/
-describe  DP_WEIRD_TRICK "weird tricks
+describe  DP_WEIRD_TRICK "weird tricks"
 score     DP_WEIRD_TRICK 1.8
+
+
+# Recent run of spam about Indigo credit - fuck off
+header    DP_INDIGO_CREDIT Subject =~ /Indigo/
+describe  DP_INDIGO_CREDIT "Mentions Indigo (spammy credit card company)"
+score     DP_INDIGO_CREDIT 1.5
+
+header    DP_THE_INDIGO_CARD Subject =~ /(with (the )?Indigo|Indigo.+card)/i
+describe  DP_THE_INDIGO_CARD "Mentions Indigo credit card
+score     DP_THE_INDIGO_CARD 4.0
+
+header    DP_CREDIT_YOU_DESERVE Subject =~ /credit you deserve/i
+describe  DP_CREDIT_YOU_DESERVE "Give yourself the credit you deserve, etc"
+score     DP_CREDIT_YOU_DESERVE 2.5
 
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
