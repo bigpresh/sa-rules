@@ -841,7 +841,7 @@ header    DP_THE_INDIGO_CARD Subject =~ /(with (the )?Indigo|Indigo.+card)/i
 describe  DP_THE_INDIGO_CARD "Mentions Indigo credit card
 score     DP_THE_INDIGO_CARD 4.0
 
-header    DP_CREDIT_YOU_DESERVE Subject =~ /credit you deserve/i
+header    DP_CREDIT_YOU_DESERVE Subject =~ /credit your? deserve/i
 describe  DP_CREDIT_YOU_DESERVE "Give yourself the credit you deserve, etc"
 score     DP_CREDIT_YOU_DESERVE 2.5
 
