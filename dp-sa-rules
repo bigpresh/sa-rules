@@ -855,6 +855,9 @@ full      DP_IMAGE_EDITING_SERVICES /(photo|image) editing services/
 describe  DP_IMAGE_EDITING_SERVICES Mentions image/photo editing services
 score     DP_IMAGE_EDITING_SERVICES 3.8
 
+header    DP_REPLY_TO_ALIYUN Reply-To =~ /.+\@aliyun.com/
+describe  DP_REPLY_TO_ALIYUN Seen lots of spam using fake From and *@aliyun.com for Reply-To
+score     DP_REPLY_TO_ALIYUN 100
 
 
 
