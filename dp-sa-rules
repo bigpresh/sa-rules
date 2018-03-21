@@ -846,6 +846,18 @@ describe  DP_CREDIT_YOU_DESERVE "Give yourself the credit you deserve, etc"
 score     DP_CREDIT_YOU_DESERVE 2.5
 
 
+# I keep getting spam offering image editing, for some reason
+header    DP_EDIT_PHOTOS Subject =~ /(edit.+(photo|image)|(photo|image).+edit)/i
+describe  DP_EDIT_PHOTOS Subject mentions editing photos/images
+score     DP_EDIT_PHOTOS Subject 2.8
+
+full      DP_IMAGE_EDITING_SERVICES /(photo|image) editing services/
+describe  DP_IMAGE_EDITING_SERVICES Mentions image/photo editing services
+score     DP_IMAGE_EDITING_SERVICES 3.8
+
+
+
+
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
 describe        RELAYCOUNTRY_CN Relayed through China
