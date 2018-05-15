@@ -869,7 +869,9 @@ header    DP_REPLY_TO_ALIYUN Reply-To =~ /.+\@aliyun.com/
 describe  DP_REPLY_TO_ALIYUN Seen lots of spam using fake From and *@aliyun.com for Reply-To
 score     DP_REPLY_TO_ALIYUN 100
 
-
+header    DP_SUBJECT_JOE_WHO Subject =~ /Joe Vitale/
+describe  DP_SUBJECT_JOE_WHO "NEW: Joe Vitale's Ho'oponopono Certification" - what?
+score     DP_SUBJECT_JOE_WHO 5.0
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
