@@ -877,6 +877,10 @@ header    DP_FREE_GUN_HOLDER Subject =~ /Complimentary Gun Holder/
 describe  DP_FREE_GUN_HOLDER Free gun holder?  Why would I want that?
 score     DP_FREE_GUN_HOLDER 5.0
 
+header    DP_DO_THIS_TO Subject =~ /(Do|Eat) THIS (one thing )?to/
+describe  DP_DO_THIS_TO Do THIS to get in my spam folder.
+score     DP_DO_THIS_TO 3.8
+
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
 describe        RELAYCOUNTRY_CN Relayed through China
