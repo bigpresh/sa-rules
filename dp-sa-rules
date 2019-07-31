@@ -864,6 +864,13 @@ full      DP_CUTTING_OUT /(photo|image) (cutting|clipping)/
 describe  DP_CUTTING_OUT Mentions image cutting out/clipping
 score     DP_CUTTING_OUT 1.8
 
+full      DP_YOUR_PW_IS /your password is/
+describe  DP_YOUR_PW_IS Says your password is...
+score     DP_YOUR_PW_IS 2.8
+
+full      DP_YOUR_COMPUTER_INFECTED /your computer was infected/
+describe  DP_YOUR_COMPUTER_INFECTED Claims your computer was infected
+score     DP_YOUR_COMPUTER_INFECTED 2.8
 
 header    DP_REPLY_TO_ALIYUN Reply-To =~ /.+\@aliyun.com/
 describe  DP_REPLY_TO_ALIYUN Seen lots of spam using fake From and *@aliyun.com for Reply-To
@@ -880,6 +887,7 @@ score     DP_FREE_GUN_HOLDER 5.0
 header    DP_DO_THIS_TO Subject =~ /(Do|Eat) THIS (one thing )?to/
 describe  DP_DO_THIS_TO Do THIS to get in my spam folder.
 score     DP_DO_THIS_TO 3.8
+
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
