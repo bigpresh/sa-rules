@@ -872,6 +872,16 @@ full      DP_YOUR_COMPUTER_INFECTED /your computer was infected/
 describe  DP_YOUR_COMPUTER_INFECTED Claims your computer was infected
 score     DP_YOUR_COMPUTER_INFECTED 2.8
 
+full      DP_COLLECTED_YOUR_DATA /I collected (all )?your (private )?data/
+describe  DP_COLLECTED_YOUR_DATA Claims to have collected your data
+score     DP_COLLECTED_YOUR_DATA 2.8
+
+full      DP_MAKE_AVG_OF /make an average of .{1,10}per/
+describe  DP_MAKE_AVG_OF Make an average of ...
+score     2.0
+
+
+
 header    DP_REPLY_TO_ALIYUN Reply-To =~ /.+\@aliyun.com/
 describe  DP_REPLY_TO_ALIYUN Seen lots of spam using fake From and *@aliyun.com for Reply-To
 score     DP_REPLY_TO_ALIYUN 100
