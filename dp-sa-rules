@@ -852,31 +852,31 @@ describe  DP_EDIT_PHOTOS Subject mentions editing photos/images
 score     DP_EDIT_PHOTOS 2.8
 
 
-full      DP_IMAGE_EDITING_SERVICES /(photo|image) (editing )?services/
+full      DP_IMAGE_EDITING_SERVICES /(photo|image) (editing )?services/i
 describe  DP_IMAGE_EDITING_SERVICES Mentions image/photo editing services
 score     DP_IMAGE_EDITING_SERVICES 3.8
 
-full      DP_IMAGE_RETOUCHING /(photo|image|skin) re-?touch/
+full      DP_IMAGE_RETOUCHING /(photo|image|skin) re-?touch/i
 describe  DP_IMAGE_RETOUCHING Mentions image retouching
 score     DP_IMAGE_RETOUCHING 1.8
 
-full      DP_CUTTING_OUT /(photo|image) (cutting|clipping)/
+full      DP_CUTTING_OUT /(photo|image) (cutting|clipping)/i
 describe  DP_CUTTING_OUT Mentions image cutting out/clipping
 score     DP_CUTTING_OUT 1.8
 
-full      DP_YOUR_PW_IS /your password is/
+full      DP_YOUR_PW_IS /your password is/i
 describe  DP_YOUR_PW_IS Says your password is...
 score     DP_YOUR_PW_IS 2.8
 
-full      DP_YOUR_COMPUTER_INFECTED /your computer was infected/
+full      DP_YOUR_COMPUTER_INFECTED /your computer was infected/i
 describe  DP_YOUR_COMPUTER_INFECTED Claims your computer was infected
 score     DP_YOUR_COMPUTER_INFECTED 2.8
 
-full      DP_COLLECTED_YOUR_DATA /I collected (all )?your (private )?data/
+full      DP_COLLECTED_YOUR_DATA /I collected (all )?your (private )?data/i
 describe  DP_COLLECTED_YOUR_DATA Claims to have collected your data
 score     DP_COLLECTED_YOUR_DATA 2.8
 
-full      DP_MAKE_AVG_OF /make an average of .{1,10}per/
+full      DP_MAKE_AVG_OF /make an average of .{1,10}per/i
 describe  DP_MAKE_AVG_OF Make an average of ...
 score     2.0
 
@@ -890,11 +890,11 @@ header    DP_SUBJECT_JOE_WHO Subject =~ /Joe Vitale/
 describe  DP_SUBJECT_JOE_WHO "NEW: Joe Vitale's Ho'oponopono Certification" - what?
 score     DP_SUBJECT_JOE_WHO 5.0
 
-header    DP_FREE_GUN_HOLDER Subject =~ /Complimentary Gun Holder/
+header    DP_FREE_GUN_HOLDER Subject =~ /Complimentary Gun Holder/i
 describe  DP_FREE_GUN_HOLDER Free gun holder?  Why would I want that?
 score     DP_FREE_GUN_HOLDER 5.0
 
-header    DP_DO_THIS_TO Subject =~ /(Do|Eat) THIS (one thing )?to/
+header    DP_DO_THIS_TO Subject =~ /(Do|Eat) THIS (one thing )?to/i
 describe  DP_DO_THIS_TO Do THIS to get in my spam folder.
 score     DP_DO_THIS_TO 3.8
 
