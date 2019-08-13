@@ -880,6 +880,11 @@ full      DP_MAKE_AVG_OF /make an average of .{1,10}per/i
 describe  DP_MAKE_AVG_OF Make an average of ...
 score     2.0
 
+full      DP_SEND_BITCOINS /(send|transfer).{1,10}bitcoin/i
+describe  DP_SEND_BITCOINS Asks you to send BitCoin
+score     DP_SEND_BITCOINS 2.2
+
+ 
 
 
 header    DP_REPLY_TO_ALIYUN Reply-To =~ /.+\@aliyun.com/
