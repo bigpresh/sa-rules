@@ -878,13 +878,24 @@ score     DP_COLLECTED_YOUR_DATA 2.8
 
 full      DP_MAKE_AVG_OF /make an average of .{1,10}per/i
 describe  DP_MAKE_AVG_OF Make an average of ...
-score     2.0
+score     DP_MAKE_AVG_OF 2.0
 
-full      DP_SEND_BITCOINS /(send|transfer).{1,10}bitcoin/i
+full      DP_SEND_BITCOINS /(send|transfer|fund).{1,10}bitcoin/i
 describe  DP_SEND_BITCOINS Asks you to send BitCoin
 score     DP_SEND_BITCOINS 2.2
 
- 
+full      DP_RECORDED_VIDEOS /video.{1,5}recorded of you/i
+describe  DP_RECORDED_VIDEOS Mentions recorded videos of you
+score     DP_RECORDED_VIDEOS 2.0
+
+full      DP_N1ghTm4r3 /N1ghTm4r3/i
+describe  DP_N1ghTm4r3 "Contains 'N1ghTm4r3' - seen in lots of hacker blackmail spam"
+score     DP_N1ghTm4r3 4.0
+
+full      DP_RECORDED_YOU /recorded.{1,5}you masturbating/
+describe  DP_RECORDED_YOU "Recorded you masturbating"
+score     DP_RECORDED_YOU 4.0
+
 
 
 header    DP_REPLY_TO_ALIYUN Reply-To =~ /.+\@aliyun.com/
