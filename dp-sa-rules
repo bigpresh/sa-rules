@@ -870,11 +870,11 @@ score     DP_YOUR_PW_IS 2.8
 
 full      DP_YOUR_COMPUTER_INFECTED /your computer was infected/i
 describe  DP_YOUR_COMPUTER_INFECTED Claims your computer was infected
-score     DP_YOUR_COMPUTER_INFECTED 2.8
+score     DP_YOUR_COMPUTER_INFECTED 3.2
 
 full      DP_COLLECTED_YOUR_DATA /I collected (all )?your (private )?data/i
 describe  DP_COLLECTED_YOUR_DATA Claims to have collected your data
-score     DP_COLLECTED_YOUR_DATA 2.8
+score     DP_COLLECTED_YOUR_DATA 3.2
 
 full      DP_MAKE_AVG_OF /make an average of .{1,10}per/i
 describe  DP_MAKE_AVG_OF Make an average of ...
@@ -886,7 +886,28 @@ score     DP_SEND_BITCOINS 2.2
 
 full      DP_RECORDED_VIDEOS /video.{1,5}recorded of you/i
 describe  DP_RECORDED_VIDEOS Mentions recorded videos of you
-score     DP_RECORDED_VIDEOS 2.0
+score     DP_RECORDED_VIDEOS 2.5
+
+full      DP_SEND_TO_YOUR_CONTACTS /send the videos? to all your (contacts|friends)/i
+describe  DP_SEND_TO_YOUR_CONTACTS Threatens to send video to all your contact
+score     DP_SEND_TO_YOUR_CONTACTS 3.0
+
+full      DP_MALWARE_GAVE_ME_ACCESS /My malware gave me full (access|control)/i
+describe  DP_MALWARE_GAVE_ME_ACCESS My malware brings all the boys to the yard^W^W^W^W^W^W^Wgave me control
+score     DP_MALWARE_GAVE_ME_ACCESS 3.0
+
+full      DP_ACCESSED_YOUR_ACCOUNTS /I (got|gained|had) access to all your accounts/i
+describe  DP_ACCESSED_YOUR_ACCOUNTS Claims to have gained access to accounts
+score     DP_ACCESSED_YOUR_ACCOUNTS 3.0
+
+full      DP_SENT_FROM_YOUR_ACCOUNT /I sent this message from your account/
+describe  DP_SENT_FROM_YOUR_ACCOUNT Claims to have sent from your account
+score     DP_SENT_FROM_YOUR_ACCOUNT 3.0
+
+full      DP_SMALL_AMOUNT_FOR_SILENCE /small amount for my silence/
+describe  DP_SMALL_AMOUNT_FOR_SILENCE Small amount for my silence blackmail
+score     DP_SMALL_AMOUNT_FOR_SILENCE 3.0
+
 
 full      DP_N1ghTm4r3 /N1ghTm4r3/i
 describe  DP_N1ghTm4r3 "Contains 'N1ghTm4r3' - seen in lots of hacker blackmail spam"
@@ -895,8 +916,6 @@ score     DP_N1ghTm4r3 4.0
 full      DP_RECORDED_YOU /recorded.{1,5}you masturbating/
 describe  DP_RECORDED_YOU "Recorded you masturbating"
 score     DP_RECORDED_YOU 4.0
-
-
 
 header    DP_REPLY_TO_ALIYUN Reply-To =~ /.+\@aliyun.com/
 describe  DP_REPLY_TO_ALIYUN Seen lots of spam using fake From and *@aliyun.com for Reply-To
