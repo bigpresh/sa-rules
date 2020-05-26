@@ -933,6 +933,14 @@ header    DP_DO_THIS_TO Subject =~ /(Do|Eat) THIS (one thing )?to/i
 describe  DP_DO_THIS_TO Do THIS to get in my spam folder.
 score     DP_DO_THIS_TO 3.8
 
+header    DP_DO_THIS_TO Subject =~ /pursue money/i
+describe  DP_DO_THIS_TO Spammers move to pursue money.
+score     DP_DO_THIS_TO 2.5
+
+header    DP_DO_THIS_TO Subject =~ /owed to you/i
+describe  DP_DO_THIS_TO Money owed?  Yeah, right.
+score     DP_DO_THIS_TO 2.5
+
 
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
