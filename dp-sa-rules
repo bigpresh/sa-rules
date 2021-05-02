@@ -942,6 +942,14 @@ describe  DP_DO_THIS_TO Money owed?  Yeah, right.
 score     DP_DO_THIS_TO 2.5
 
 
+# Unlikely to want to be sent Windows executables, bat files etc:
+full     DP_UNWANTED_ATTACH_TYPES /Content-Disposition:.+filename=".+(exe|bat|cmd|scr)"/
+describe DP_UNWANTED_ATTACH_TYPES Windows executable type attachment
+score    DP_UNWANTED_ATTACH_TYPES 4.0
+
+
+
+
 # these depend on Mail::SpamAssassin::Plugin::RelayCountry :
 header          RELAYCOUNTRY_CN X-Relay-Countries =~ /CN/
 describe        RELAYCOUNTRY_CN Relayed through China
