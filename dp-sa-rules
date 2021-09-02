@@ -941,6 +941,18 @@ header    DP_DO_THIS_TO Subject =~ /owed to you/i
 describe  DP_DO_THIS_TO Money owed?  Yeah, right.
 score     DP_DO_THIS_TO 2.5
 
+# Seen an awful lot of DocuSign spam lately, e.g.:
+# "You received invoice from DocuSign Electronic Signature Service"
+# "You got invoice from DocuSign Electronic Service"
+# "You got notification from DocuSign Electronic Service"
+# "Please DocuSign. Document for signature."
+#
+# Don't use this if you actually expect to receive documents to sign via
+# DocuSign who I believe are a legit company.
+header    DP_DOCUSIGN Subject =~ /docusign/i
+describe  DP_DOCUSIGN DocuSign in subject
+score     DP_DOCUSIGN 6.0
+
 
 # Unlikely to want to be sent Windows executables, bat files etc:
 full     DP_UNWANTED_ATTACH_TYPES /Content-Disposition:.+filename=".+(exe|bat|cmd|scr)"/
