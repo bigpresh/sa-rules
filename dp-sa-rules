@@ -941,6 +941,10 @@ header    DP_DO_THIS_TO Subject =~ /owed to you/i
 describe  DP_DO_THIS_TO Money owed?  Yeah, right.
 score     DP_DO_THIS_TO 2.5
 
+header    DP_QUICK_CALL_TO Subject =~ /quick call to improve your business/
+describe  DP_QUICK_CALL_TO A quick spam to annoy your business
+score     DP_QUICK_CALL_TO 3.0
+
 # Seen an awful lot of DocuSign spam lately, e.g.:
 # "You received invoice from DocuSign Electronic Signature Service"
 # "You got invoice from DocuSign Electronic Service"
